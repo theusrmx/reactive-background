@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+  }
+
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1e1e1e;
+  }
+
+  img{
+    width: 398.079px;
+    height: 607px;
+    flex-shrink: 0;
+
+    position: absolute;
+    top: 50%; /* Centralizando verticalmente */
+    left: 10px; /* Posicionando no canto esquerdo */
+    transform: translate(0, -50%); /* Para centralizar verticalmente */
+    margin: 20px;
+
+    box-shadow: 0px 0px 37px 0px rgba(0, 0, 0, 0.50);
+  }
