@@ -1,5 +1,4 @@
 const image = document.querySelector('img');
-const div = document.querySelector('#div-poster')
 const colorThief = new ColorThief();
 
 image.onload = function() {
@@ -9,6 +8,28 @@ image.onload = function() {
   const [R1, G1, B1] = color1;
   const [R2, G2, B2] = color2;
 
-  // Aplicar gradiente da esquerda para a direita com as duas cores predominantes e cor de fundo original
-  document.body.style.background = `radial-gradient(circle at 0%, rgb(${R1}, ${G1}, ${B1}), rgb(${R2}, ${G2}, ${B2}) 30%, #1e1e1e 50%)`;
+console.log("cores resgatadas")
+document.body.style.background = `radial-gradient(circle at 0%, rgb(${R2}, ${G2}, ${B2}), rgb(${R1}, ${G1}, ${B1}) , #1e1e1e 60%)`;
 };
+
+
+const ratingStars = [...document.getElementsByClassName("rating__star")];
+
+function executeRating(stars) {
+  const starClassActive = "rating__star fas fa-star";
+  const starClassInactive = "rating__star far fa-star";
+  const starsLength = stars.length;
+  let i;
+  stars.map((star) => {
+    star.onclick = () => {
+      i = stars.indexOf(star);
+
+      if (star.className===starClassInactive) {
+        for (i; i >= 0; --i) stars[i].className = starClassActive;
+      } else {
+        for (i; i < starsLength; ++i) stars[i].className = starClassInactive;
+      }
+    };
+  });
+}
+executeRating(ratingStars);

@@ -1,26 +1,213 @@
-*{
-    margin: 0;
-  }
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  height: 100vh;
+  display: flex;
+}
 
-    background-color: #1e1e1e;
-  }
+.poster-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 9vh;
+  max-width: 100%;
+}
 
-  img{
-    width: 398.079px;
-    height: 607px;
-    flex-shrink: 0;
+.poster-container img {
+  max-width: 300px;
+  max-height: 450px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Mantém a proporção da imagem */
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
 
-    position: absolute;
-    top: 50%; /* Centralizando verticalmente */
-    left: 10px; /* Posicionando no canto esquerdo */
-    transform: translate(0, -50%); /* Para centralizar verticalmente */
-    margin: 20px;
+.container img {
+  max-width: 200px;
+  max-height: 150px;
+}
 
-    box-shadow: 0px 0px 37px 0px rgba(0, 0, 0, 0.50);
-  }
+.btn-poster{
+  background-color:#c62d1f;
+  border-radius:19px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:20px;
+  padding:12px 48px;
+  margin-bottom: 10px;
+  text-decoration:none;
+}
+
+.btn-poster:hover {
+  background-color:#f24437;
+}
+  
+.btn-poster:active {
+  position:relative;
+  top:1px;
+}
+  
+.poster-info{
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.poster-info ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poster-info li {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.poster-info i {
+  display: block;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 4px;
+}
+
+.poster-info p {
+  font-family: Arial;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 2px;
+}
+
+.movie-info-container {
+  width: 50%;
+  height: auto; /* Ajuste para altura automática */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  overflow: hidden; /* Impede o conteúdo de transbordar */
+  padding: 20px; /* Adicione um espaçamento para melhor visualização */
+  text-align: center; /* Centraliza horizontalmente */
+}
+
+.movie-info-container h1 {
+  margin: 20px 0; 
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px; /* Ajuste na fonte */
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+.rating {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.rating__star {
+  cursor: pointer;
+  color: #D83333;
+}
+
+.box-review {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start; /* Ajusta o alinhamento no início */
+  margin-top: 20px; /* Adiciona espaço entre a classificação e a revisão */
+}
+
+.box-review h3 {
+  margin: 20px;
+  color: #FFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-self: flex-start;
+}
+
+.textarea-container textarea{
+  margin-left: 20px ;
+  padding: 20px;
+  height: 180px;
+  width: 607px;
+
+  box-sizing: border-box;
+
+  font-size: 16px;
+  border-width: 1px;
+  border-color: #d83333;
+  color: #ffffff;
+  border-style: solid;
+  border-radius: 33px;
+  background-color: rgba(0, 0, 0, 0.5);
+  resize: none;
+
+}
+
+.textarea-container textarea:focus {
+  outline:none;
+}
+
+.textarea-container button{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  background-color: #d83333;
+  color: white;
+  border: none;
+  padding: 5px;
+  font-size: 31px;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 70%;
+}
+
+.textarea-container button:active {
+  background-color: #d83333;
+  transform: translateY(2px);
+}
+
+.sinopse-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.sinopse-box h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 18px; 
+  font-weight: bold;
+}
+
+.sinopse-box p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px;
+  text-align: justify;
+}
+
+
